@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2.css">
+    <link rel="shortcut icon" href="logo_catequese-removebg-preview (1).png" type="image/x-icon">
+
+    <title>Exame de Consciência</title>
+    
+</head>
+<body class="js1 bodysobre">
+    <header>
+        <div class="header">
+            <img src="logo_catequese-removebg-preview (1).png" alt="Logo" class="Minha-logo">
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Exame de Conciência</a></li>
+                    <li><a href="Oraçoes.html">Orações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="jogos-container">
+                <h2>Preparação para a Confissão - Exame de Consciência</h2>
+                
+
+                <ul id="myList">
+                    <li><input type="checkbox" class="item">Deixei, em alguma confissão anterior, algum pecado grave sem confessar?</li>
+                        <li><input type="checkbox" class="item">Deixei de rezar de manhã e de noite?</li>
+                        <li><input type="checkbox" class="item">Faltei à Santa Missa aos domingos e dias de Preceito?</li>
+                        <li><input type="checkbox" class="item"> Fiquei fora da Igreja ou não prestei atenção?</li>
+                        <li><input type="checkbox" class="item">Fui à Santa Missa com roupas indecentes?</li>
+                         <li><input type="checkbox" class="item"> Cheguei tarde à Sta. Missa, por culpa própria?</li>
+                        <li><input type="checkbox" class="item"> Deixei de guardar o jejum e abstinência de carne nos dias prescritos pela Igreja?</li>
+                         <li><input type="checkbox" class="item">Por minha culpa, rezei mal, conversei na Igreja?</li>
+                        <li><input type="checkbox" class="item">Deixei de estudar a Religião?</li>
+                        <li><input type="checkbox" class="item"> Li algum tipo de literatura contra a fé católica?</li>
+                         <li><input type="checkbox" class="item">Duvidei de alguma verdade da Fé, perdi a Fé em Deus?</li>
+                        <li><input type="checkbox" class="item">Tive vergonha de demonstrar minha Fé Católica?</li>
+                        <li><input type="checkbox" class="item">Deixei de ajudar a Igreja com o dízimo?</li>
+                        <li><input type="checkbox" class="item">Frequentei outras religiões ou seitas?</li>
+                         <li><input type="checkbox" class="item">Acreditei em horóscopos, tarôs, búzios, sortilégios etc.?</li>
+                         <li><input type="checkbox" class="item">Falei o nome de Deus sem respeito?</li>
+                        <li><input type="checkbox" class="item">Jurei por Deus, jurei falso?</li>
+                        <li><input type="checkbox" class="item">Blasfemei ou disse palavras injuriosas contra Deus?</li>
+                         <li><input type="checkbox" class="item"> Fiz promessas e não as cumpri?</li>
+                        <li><input type="checkbox" class="item">Deixei de fazer a Páscoa (Confissão e Comunhão)?</li>
+                         <li><input type="checkbox" class="item">Desobedeci, fui malcriado, xinguei meus pais?</li>
+                        <li><input type="checkbox" class="item">Ofendi gravemente meus irmãos ou outras pessoas?</li>
+                        <li><input type="checkbox" class="item">Entristeci, de alguma forma, a meus pais?</li>
+                        <li><input type="checkbox" class="item">Dei mal exemplo para alguém?</li>
+                        <li><input type="checkbox" class="item">Fui grosseiro(a) em casa?</li>
+                        <li><input type="checkbox" class="item">Pensei mal, falei mal dos outros?</li>
+                        <li><input type="checkbox" class="item">Falei mentiras, fiz fofocas, fiz intrigas?</li>
+                        <li><input type="checkbox" class="item">Briguei sério com alguém?</li>
+                        <li><input type="checkbox" class="item">Neguei-me à reconciliação?</li>
+                        <li><input type="checkbox" class="item">Guardei raiva, desejei ou cometi vinganças?</li>
+                        <li><input type="checkbox" class="item">Ofendi alguém com palavras pesadas?</li>
+                        <li><input type="checkbox" class="item">Agredi alguém?</li>
+                        <li><input type="checkbox" class="item">Desejei mal a alguém?</li>
+                        <li><input type="checkbox" class="item">Fui culpado em levar alguém a pecar?</li>
+                        <li><input type="checkbox" class="item">Maltratei os animais?</li>
+                        <li><input type="checkbox" class="item">Prejudiquei a natureza?</li>
+                        <li><input type="checkbox" class="item">Roubei?</li>
+                        <li><input type="checkbox" class="item">Tive vicio (video game, celular,etc)</li>
+                        <li><input type="checkbox" class="item">Disse mentiras?</li>
+                        <li><input type="checkbox" class="item">Fui guloso?</li>
+                </ul>
+            
+                <script>
+                    
+                    list.forEach(item => {
+                        item.addEventListener('change', function() {
+                            this.parentNode.classList.toggle('checked', this.checked);
+                             
+                        });
+                    });
+                </script>
+                
+                <button id="save">Salvar</button>
+
+    <script>
+        let list = document.querySelectorAll('.item');
+        list.forEach((item, index) => {
+            // Carregar o estado salvo
+            let saved = localStorage.getItem('item' + index);
+            item.checked = saved === 'true' ? true : false;
+
+            item.addEventListener('change', function() {
+                this.parentNode.classList.toggle('checked', this.checked);
+                // Salvar o estado
+                localStorage.setItem('item' + index, this.checked);
+            });
+        });
+
+        document.getElementById('save').addEventListener('click', function() {
+            alert('SUa Lista foi salva');
+        });
+    </script>
+            </div>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <style>
+        .imagem-inferior-direita {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+        }
+    </style>
+</head>
+<body class="js1 bodysobre">
+
+    <img src="igreja-removebg-preview.png" alt="logo" class="imagem-inferior-direita">
+
+    <script>
+        window.onload = function() {
+            document.body.style.opacity = "1";
+        };
+    </script>
+
+
+</body>
+</html>
